@@ -1,0 +1,21 @@
+.sidebarItem {
+  @apply relative 
+    pl-5
+    z-20 
+    flex 
+    w-full 
+    items-center
+    gap-1 
+    overflow-hidden 
+    text-sm 
+    text-neutral-800 
+    dark:text-neutral-200 
+    hover:text-neutral-900 
+    hover:dark:text-white;
+
+    &.active {
+        @apply text-green-600
+            font-bold
+          dark:text-white;
+      }
+}

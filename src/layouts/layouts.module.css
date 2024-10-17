@@ -1,0 +1,28 @@
+.baseLayout {
+  @apply grid
+    h-max
+    min-h-full
+    w-full
+    grid-cols-[1fr]
+    grid-rows-[auto_1fr_auto];
+}
+
+.homeLayout {
+  @apply gap-8
+      md:flex-row
+      md:gap-14
+      xl:gap-28
+      w-full
+      2xl:gap-32;
+}
+
+.pageLayout {
+  @apply flex
+  min-h-full;
+
+  .mainContent {
+    @apply px-10
+    pt-10
+    flex-1;
+  }
+}

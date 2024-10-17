@@ -1,0 +1,84 @@
+{
+    "topNavigation": {
+        "about": {
+            "link": "/about",
+            "label": "About"
+        },
+        "Vue": {
+            "link": "/vue",
+            "label": "Vue"
+        },
+        "Nuxt": {
+            "link": "/nuxt",
+            "label": "Nuxt"
+        },
+        "React": {
+            "link": "/react",
+            "label": "React"
+        },
+        "Next":{
+            "link": "/next",
+            "label": "Next"
+        },
+        "Blog": {
+            "link": "/blog",
+            "label": "Blog"
+        }
+    },
+    "sideNavigation": {
+        "react": {
+            "items": {
+                "hooks": {
+                    "label": "Hooks",
+                    "items": {
+                        "stateManagement": {
+                            "link": "/react/hooks/stateManagement",
+                            "label": "State Management"
+                        },
+                        "ref": {
+                            "link": "/react/hooks/ref",
+                            "label": "Ref"
+                        },
+                        "effect": {
+                            "link": "/react/hooks/effect",
+                            "label": "Effect"
+                        },
+                        "context": {
+                            "link": "/react/hooks/context",
+                            "label": "Context"
+                        },
+                        "performance": {
+                            "link": "/react/hooks/performance",
+                            "label": "Performance"
+                        },
+                        "random": {
+                            "link": "/react/hooks/random",
+                            "label": "Random"
+                        },
+                        "transition": {
+                            "link": "/react/hooks/transition",
+                            "label": "Transition"
+                        },
+                        "react19": {
+                            "link": "/react/hooks/react19",
+                            "label": "React19"
+                        }
+                    }
+                }
+            }
+        },
+        "vue": {
+            "items": {
+                "essentials": {
+                    "label": "Essentials",
+                    "items": {
+                        "watcher": {
+                            "link": "/vue/essentials/watcher",
+                            "label": "watcher"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

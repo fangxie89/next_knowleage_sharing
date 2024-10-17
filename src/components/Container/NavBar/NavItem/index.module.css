@@ -1,0 +1,13 @@
+.navItem {
+  @apply inline-flex
+  items-center
+  gap-2
+  rounded
+  px-3
+  py-2;
+
+  &.active {
+    @apply bg-green-500
+    text-white;
+  }
+}
