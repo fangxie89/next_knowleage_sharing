@@ -1,0 +1,69 @@
+---
+date: "2024-10-30T12:00:00.000Z"
+category: css
+title: shadow
+layout: blog-post
+---
+
+  <div class='wrapper'>
+    <h1 class='shadow'>shadow</h1>
+  </div>
+
+  ``` js
+  div.wrapper {
+    width: 100%;
+    height: 100%;
+    background: #aaa;
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1.shadow {
+    font-size: 120px;
+    font-weight: bold;
+    color: #fff;
+    position:relative;
+  }
+
+  h1.shadow::before {
+  content: 'shadow';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: -1;
+  color: #fff;
+  transform: translate(-52px, 26px) scaleY(0.5) skew(50deg);
+  filter: blur(5px);
+  -webkit-mask-image: linear-gradient(transparent, #000);
+}
+  ```
+<style jsx>{`
+  div.wrapper {
+    width: 100%;
+    height: 100%;
+    background: #aaa;
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1.shadow {
+    font-size: 120px;
+    font-weight: bold;
+    color: #fff;
+    position:relative;
+  }
+
+  h1.shadow::before {
+  content: 'shadow';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: -1;
+  color: #fff;
+  transform: translate(-52px, 26px) scaleY(0.5) skew(50deg);
+  filter: blur(5px);
+  -webkit-mask-image: linear-gradient(transparent, #000);
+}
+`}</style>

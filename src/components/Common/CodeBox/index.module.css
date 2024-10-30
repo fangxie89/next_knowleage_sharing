@@ -1,0 +1,99 @@
+.root {
+  @apply w-full
+    rounded
+    border
+    border-neutral-900
+    bg-neutral-950;
+
+  .content {
+    @apply m-0
+    text-neutral-400
+      p-4;
+  }
+
+  & > .footer {
+    @apply flex
+      items-center
+      justify-between
+      border-t
+      border-t-neutral-900
+      px-4
+      py-3
+      text-sm
+      font-medium;
+
+    & > .language {
+      @apply text-neutral-400;
+    }
+
+    & > .action {
+      @apply px-3
+        py-1.5
+        font-medium;
+    }
+  }
+}
+
+.notification {
+  @apply flex
+    items-center
+    gap-3;
+}
+
+.icon {
+  @apply size-4;
+}
+
+.root .content > code {
+  display: grid;
+  overflow-x: auto;
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.875rem; /* Tailwind text-sm */
+  line-height: 1.4; /* Tailwind leading-snug */
+  color: #9CA3AF; /* Tailwind text-neutral-400 */
+  counter-reset: line;
+}
+
+.root .content > code > [class='line'] {
+  position: relative;
+  min-width: 0;
+  padding-left: 2rem; /* Tailwind pl-8 */
+}
+
+.root .content > code > [class='line']:not(:empty):last-child::before {
+  content: '';
+  display: inline-block;
+}
+
+.root .content > code > [class='line']:not(:empty):last-child::after {
+  width: 1rem; /* Tailwind w-4 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-right: 1rem; /* Tailwind mr-4 */
+  text-align: right;
+  color: #4B5563; /* Tailwind text-neutral-600 */
+  content: counter(line);
+  counter-increment: line;
+}
+
+.root > .footer {
+  @apply flex items-center justify-between border-t border-t-neutral-900 px-4 py-3 text-sm font-medium;
+}
+
+.root > .footer > .language {
+  @apply text-neutral-400;
+}
+
+.root > .footer > .action {
+  @apply px-3 py-1.5 font-medium;
+}
+
+.notification {
+  @apply flex items-center gap-3;
+}
+
+.icon {
+  @apply size-4;
+}

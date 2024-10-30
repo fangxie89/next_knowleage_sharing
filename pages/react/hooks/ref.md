@@ -47,7 +47,7 @@ const handleFocus = () => {
 ```
 
 
-## tips:
+## tips 1:
 
 Could conbine useRef with Context Provider, could use useRef to hold a mutable reference, it will not trigger re-render when changing. and it allows any component consumes the context to modify it.
 
@@ -62,6 +62,53 @@ const MyProvider = ({children}) => {
     </Mycontext.Provider>
 }
 
+```
+
+## tips 2
+
+To remember the value from last round render
+
+```js
+function PreviousValueTracker({ value }) {
+  const previousValueRef = useRef(value);
+
+  useEffect(() => {
+    previousValueRef.current = value;  // record current value
+  });
+
+  const previousValue = previousValueRef.current;
+
+  return (
+    <div>
+      <p>Current value: {value}</p>
+      <p>Previous value: {previousValue}</p>
+    </div>
+  );
+}
+```
+
+## tips 3
+
+Record multipal dom
+```js
+function DynamicRefs() {
+  const refs = useRef([]);
+
+  const addRef = (el) => {
+    if (el && !refs.current.includes(el)) {
+      refs.current.push(el);
+    }
+  };
+
+  return (
+    <div>
+      {Array(5).fill(0).map((_, index) => (
+        <input key={index} ref={addRef} />
+      ))}
+      <button onClick={() => console.log(refs.current)}>Log all refs</button>
+    </div>
+  );
+}
 ```
 # useImperativeHandle
 

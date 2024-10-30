@@ -3,6 +3,7 @@ import type { FC } from "react";
 import "./globals.css";
 import { PropsWithChildren } from "react";
 import BaseLayout from "@/src/layouts/Base";
+import '@/styles/index.css';
 
 const RootLaylout: FC<PropsWithChildren> = ({ children }) => {
   return (

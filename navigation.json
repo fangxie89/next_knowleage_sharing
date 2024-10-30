@@ -1,9 +1,5 @@
 {
     "topNavigation": {
-        "about": {
-            "link": "/about",
-            "label": "About"
-        },
         "Vue": {
             "link": "/vue",
             "label": "Vue"
@@ -62,6 +58,30 @@
                         "react19": {
                             "link": "/react/hooks/react19",
                             "label": "React19"
+                        }
+                    }
+                },
+                "redux": {
+                    "label": "Redux"
+                },
+                "react-query": {
+                    "label": "React Query",
+                    "items": {
+                        "useQuery": {
+                            "link": "/react/reactQuery/useQuery",
+                            "label": "useQuery"
+                        },
+                        "useMutation": {
+                            "link": "/react/reactQuery/useMutation",
+                            "label": "useMutation"
+                        },
+                        "queryClient": {
+                            "link": "/react/reactQuery/queryClient",
+                            "label": "queryClient"
+                        },
+                        "useInfiniteQuery": {
+                            "link": "/react/reactQuery/useInfiniteQuery",
+                            "label": "useInfiniteQuery"
                         }
                     }
                 }

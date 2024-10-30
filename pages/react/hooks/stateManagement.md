@@ -32,6 +32,54 @@ First setState won't change vaule of state until re-render. so it runs 2 time 0 
 ```
 Using pre here could update with the lastest status
 
+## tips 2
+
+``` js
+  const [value, setValue] = useState(() => setInitialFunc());
+```
+When needs to set initialization with function on useState, using (() => setInitialFunc()), instead of setInitialFunc()
+
+``` js
+  const [value, setValue] = useState(setInitialFunc());
+```
+This will cause the setInitialFunc re-run every time component render without setting useState value.
+
+## tips 3
+
+Add condition on setValue, because even value doesn't change, the setValue still cause re-render
+``` js
+const [value, setValue] = useState('');
+
+const handleChange = (newValue) => {
+    if (newValue !== value) {
+        setValue(newValue);
+    }
+};
+```
+
+## tips 4
+
+When using on async, confirm component is still mounted, to avoid memory leak.
+``` js
+const [data, setData] = useState(null);
+
+useEffect(() => {
+    let isMounted = true;
+
+    async function fetchData() {
+        const result = await fetchSomeData();
+        if (isMounted) {
+            setData(result);
+        }
+    }
+
+    fetchData();
+
+    return () => {
+        isMounted = false;
+    };
+}, []);
+```
 # useReducer
 
 basic usage:

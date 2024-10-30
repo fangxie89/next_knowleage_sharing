@@ -6,6 +6,8 @@ import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import readingTime from 'remark-reading-time';
 
+import rehypeShikiji from './next.mdx.shiki.mjs';
+
 /**
  * Provides all our Rehype Plugins that are used within MDX
  *
@@ -15,7 +17,10 @@ export const NEXT_REHYPE_PLUGINS = [
   // Generates `id` attributes for headings (H1, ...)
   rehypeSlug,
   // Automatically add anchor links to headings (H1, ...)
-  [rehypeAutolinkHeadings, { behavior: 'wrap' }]
+  [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+    // Transforms sequential code elements into code tabs and
+  // adds our syntax highlighter (Shikiji) to Codeboxes
+  rehypeShikiji,
 ];
 
 /**

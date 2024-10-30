@@ -1,0 +1,14 @@
+.blogHeader {
+    .blogHeaderH1 {
+        @apply inline-flex
+        w-full
+        items-center
+        justify-between;
+    }
+
+    .blogHeaderP {
+        @apply text-lg
+        font-medium
+        text-neutral-800;
+    }
+}

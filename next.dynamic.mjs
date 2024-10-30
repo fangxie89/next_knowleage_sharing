@@ -44,8 +44,6 @@ const getDynamicRouter = async () => {
 
 const _getMarkdownFile = async (pathname = '') => {
     const normalizedPathName = normalize(pathname).replace('.','');
-    console.log('pathname', pathname);
-    console.log('pathnameToFilename', pathnameToFilename);
     // 查找pathnameToFilename中是否存在给定路径名
     if (pathnameToFilename.has(normalizedPathName)) {
         const filename = pathnameToFilename.get(normalizedPathName);

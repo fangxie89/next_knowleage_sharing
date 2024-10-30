@@ -1,0 +1,14 @@
+---
+date: "2015-12-08T12:00:00.000Z"
+category: javascript
+title: differece between parseInt() and Math.floor()
+layout: blog-post
+---
+
+```js
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+```
+<p>parseInt rounds towards zero, while Math.floor rounds towards the left on the number line. This causes parseInt to produce errors when dealing with negative numbers in the context of generating random numbers.</p>
+<img src='/blog/parseInt.png' />

@@ -35,7 +35,7 @@ export const getMarkdownFiles = async (root, cwd, ignore = []) => {
     const cacheKey = `${root}${ignore.join('')}`;
 
     if (!globCacheByPath.has(cacheKey)) {
-        globCacheByPath.set(cacheKey, glob('**/*.{md, mdx}', { root, cwd, ignore }));
+        globCacheByPath.set(cacheKey, glob('**/*.{md,mdx}', { cwd, ignore }));
     }
 
     return globCacheByPath.get(cacheKey);

@@ -1,4 +1,4 @@
-# Create a MD/MDX knowleage sharing platform to record knowledge and tips during learning front-end framework.
+## Create a MD/MDX knowleage sharing platform to record knowledge and tips during learning front-end framework.
 
 The side is based on the basic logic of nodejs.org
 

@@ -1,1 +1,1 @@
-export type Layouts = 'home' | 'react';
+export type Layouts = 'home' | 'react' | 'categories';
