@@ -32,12 +32,12 @@ const nextConfig = {
         return [
         {
             source: '/vue',
-            destination: '/vue/essentials/watcher',
+            destination: '/soon',
             permanent: true
         },
         {
             source: '/nuxt',
-            destination: '/nuxt/discover-javascript-timers',
+            destination: '/soon',
             permanent: true
         },
         {
@@ -47,7 +47,7 @@ const nextConfig = {
         },
         {
             source: '/next',
-            destination: '/next/discover-javascript-timers',
+            destination: '/soon',
             permanent: true
         },
         {

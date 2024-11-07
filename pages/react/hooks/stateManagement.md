@@ -80,6 +80,25 @@ useEffect(() => {
     };
 }, []);
 ```
+
+## Best Pratice
+
+### handling multipal state
+
+```js
+export function Component() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isError, setIsError] = useState(false);
+  ...
+}
+```
+Better use 1 state to handling all status, for example:
+```js
+export function Component() {
+  const [status, setStatus] = useState<'submitting' | 'error' | 'success' | 'ready'>('ready');
+  ...
+}
+```
 # useReducer
 
 basic usage:

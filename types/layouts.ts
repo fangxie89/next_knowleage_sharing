@@ -1,1 +1,1 @@
-export type Layouts = 'home' | 'react' | 'categories';
+export type Layouts = 'home' | 'react' | 'blog-category' | 'soon' | '';

@@ -2,7 +2,7 @@ import { cache } from "react";
 
 import generateBlogData from '@/next-data/generators/blogData.mjs';
 
-import { BLOG_POSTS_PER_PAGE } from '@/next.constats.mjs';
+import { BLOG_POSTS_PER_PAGE } from '@/next.constants.mjs';
 import { blogData, BlogPostsRSC } from "@/types/blog";
 
 const { categories, posts } = await (generateBlogData() as Promise<blogData>);

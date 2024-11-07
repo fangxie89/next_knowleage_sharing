@@ -110,6 +110,30 @@ function DynamicRefs() {
   );
 }
 ```
+
+## tips 4
+
+ref could use a function saved
+
+```js
+import {useState} from 'react';
+
+export default function App() {
+  const [show] = useState(false);
+  function inputRef(element: HTMLInputElement | null) {
+    if(element) {
+      element.focus();
+    }
+  };
+
+  return (
+    {show && <input ref={inputRef} type="text" />}
+  )
+}
+```
+
+The callback function sent into ref will excute when the dom mounted or undated. Makes the auto focus work without using useEffect.
+
 # useImperativeHandle
 
 ## Used to control what is exposed to the parent, 

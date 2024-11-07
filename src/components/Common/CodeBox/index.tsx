@@ -11,9 +11,7 @@ import styles from './index.module.css';
 // Transforms a code element with plain text content into a more structured
 // format for rendering with line numbers
 const transformCode = (code: ReactNode, language: string): ReactNode => {
-  console.log('style code', code);
   if (!isValidElement(code)) {
-    console.log('isValidElement');
     // Early return when the `CodeBox` child is not a valid element since the
     // type is a ReactNode, and can assume any value
     return code;
@@ -21,7 +19,6 @@ const transformCode = (code: ReactNode, language: string): ReactNode => {
 
   const content = code.props?.children;
   if (code.type !== 'code' || typeof content !== 'string') {
-    console.log('content', content);
     // There is no need to transform an element that is not a code element or
     // a content that is not a string
     return code;
@@ -72,7 +69,6 @@ const CodeBox: FC<PropsWithChildren<CodeBoxProps>> = ({
 }) => {
   const ref = useRef<HTMLPreElement>(null);
 
-  console.log('codebox');
 //   const notify = useNotification();
 //   const [, copyToClipboard] = useCopyToClipboard();
 //   const t = useTranslations();

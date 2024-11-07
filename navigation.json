@@ -19,6 +19,10 @@
         "Blog": {
             "link": "/blog",
             "label": "Blog"
+        },
+        "About Me": {
+            "link": "/aboutMe",
+            "label": "About Me"
         }
     },
     "sideNavigation": {
@@ -61,8 +65,35 @@
                         }
                     }
                 },
-                "redux": {
-                    "label": "Redux"
+                "designPatterns": {
+                    "label": "Design Patterns",
+                    "items": {
+                        "compoundComponent": {
+                            "link": "/react/designPatterns/compoundComponent",
+                            "label": "Compound Component"
+                        }
+                    }
+                },
+                "stateManagement": {
+                    "label": "Global state management",
+                    "items": {
+                        "redux": {
+                            "link": "/react/stateManagement/redux",
+                            "label": "Redux"
+                        },
+                        "easy-peasy": {
+                            "link": "/react/stateManagement/easyPeasy",
+                            "label": "easy peasy"
+                        },
+                        "zustand": {
+                            "link": "/react/stateManagement/zustand",
+                            "label": "Zustand"
+                        },
+                        "redux-toolkit": {
+                            "link": "/react/stateManagement/reduxToolkit",
+                            "label": "Redux toolkit"
+                        }
+                    }
                 },
                 "react-query": {
                     "label": "React Query",

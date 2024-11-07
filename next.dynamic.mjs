@@ -1,6 +1,6 @@
 import path, { normalize, sep, join } from "path"
 import { getMarkdownFiles } from "@/next.heplers.mjs";
-import { IS_DEVELOPMENT } from "@/next.constats.mjs";
+import { IS_DEVELOPMENT } from "@/next.constants.mjs";
 import { readFile } from "node:fs/promises";
 import { cache } from 'react';
 import { compileMDX } from './next.mdx.compiler.mjs';
