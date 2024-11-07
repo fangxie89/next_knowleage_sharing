@@ -19,6 +19,10 @@
         "Blog": {
             "link": "/blog",
             "label": "Blog"
+        },
+        "About Me": {
+            "link": "/aboutMe",
+            "label": "About Me"
         }
     },
     "sideNavigation": {

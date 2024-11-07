@@ -1,0 +1,18 @@
+.pdfContainer {
+    @apply relative
+    flex
+    items-center
+    justify-center;
+}
+.controller {
+    @apply absolute
+    bottom-16;
+
+    .controllerButton {
+        @apply px-8;
+
+        &:disabled {
+            @apply opacity-20;
+        }
+    }
+}

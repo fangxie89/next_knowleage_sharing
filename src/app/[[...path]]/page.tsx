@@ -1,10 +1,9 @@
 import { setClientContext } from "@/client-context";
-import { provideBlogCategories, provideBlogPosts } from "@/next-data/providers/blogData";
 import { dynamicRouter } from "@/next.dynamic.mjs";
 import MDXRenderer from "@/src/components/mdxRenderer";
 import WithLayout from "@/src/components/withLayout";
 import type { FC } from "react";
-
+import { BLOG_CATEGORIES_PAGE, STATIC_PAGE } from '@/next.constants.mjs';
 type PageParams = {
   params: Promise<{
     path: string[];
@@ -17,25 +16,17 @@ const getPage: FC<PageParams> = async ({ params }) => {
   if (!path) {
     return (<WithLayout layout='home'></WithLayout>)
   }
+  const pathname = `${path.join('/')}`;
 
-    const blogCategories = provideBlogCategories();
-  
-    const blogCategoriesPage = [
-      ...blogCategories.map(cat => `/blog/${cat}`),
-      ...blogCategories.map(cat => {
-        const pages = provideBlogPosts(cat).pagination.pages;
-        return [...Array(pages).keys()].map(page => `/blog/${cat}/page/${page+1}`)
-      }),
-    ].flat();
-
-    const pathname = `/${path.join('/')}`;
-    if (blogCategoriesPage.includes(pathname)) {
+    if (BLOG_CATEGORIES_PAGE.has(pathname) || STATIC_PAGE.has(pathname)) {
     const sharedContext = { pathname: pathname };
 
     setClientContext(sharedContext);
-    
+
+    const layoutName = BLOG_CATEGORIES_PAGE.has(pathname) ? BLOG_CATEGORIES_PAGE.get(pathname) : STATIC_PAGE.get(pathname);
+
     return (
-        <WithLayout layout='categories' />
+        <WithLayout layout={layoutName} />
     );
     }
   
@@ -48,7 +39,6 @@ const getPage: FC<PageParams> = async ({ params }) => {
     const { MDXContent, frontmatter, headings, readingTime } =
       await dynamicRouter.getMDXContent(source, filename);
 
-      console.log('frontmatter', frontmatter);
       const sharedContext = {
         frontmatter,
         headings,

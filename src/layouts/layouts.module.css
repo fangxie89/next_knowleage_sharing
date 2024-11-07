@@ -58,3 +58,24 @@
   md:px-14
   lg:px-28;
 }
+
+.aboutLayout {
+  @apply flex
+  w-full
+  min-w-0
+  items-center
+  justify-center
+  flex-col
+  relative;
+
+  .downloadLink {
+    @apply absolute
+    bottom-2
+    rounded
+    border-solid
+    border-2
+    px-4
+    py-2
+    ;
+  }
+}
