@@ -186,3 +186,4 @@ function ResetUser() {
 ## clear
 
 Clear all queries, nromally used when user logout.
+ 

@@ -74,6 +74,15 @@
                         }
                     }
                 },
+                "theory": {
+                    "label": "Theory",
+                    "items": {
+                        "compoundComponent": {
+                            "link": "/react/theory/lifeCycle",
+                            "label": "React 18 lifeCycle"
+                        }
+                    }
+                },
                 "stateManagement": {
                     "label": "Global state management",
                     "items": {
